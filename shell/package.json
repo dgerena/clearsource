@@ -1,0 +1,35 @@
+{
+  "name": "CLEARSOURCE",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Damasio Eli Gerena IV",
+      "title": "Back-end Developer",
+      "email": "dgerena87d@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "async": "*",
+    "better-require": "*",
+    "coffee-script": "*",
+    "colors":"*",
+    "ejs-mate": "*",
+    "express": "*",
+    "express-session":"*",
+    "isotope-layout":"*",
+    "js-sha256": "*",
+    "lodash": "*",
+    "mysql": "*",
+    "mongojs": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-twitter": "*",
+    "sequelize": "*",
+    "sequelize-hierarchy": "*",
+    "sitemap": "*",
+    "uuid": "*"
+  },
+  "devDependencies": {
+    "mocha": "1.15.1"
+  }
+}
