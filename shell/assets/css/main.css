@@ -1,2 +1,6 @@
+body{
+	width: 100%;
+	margin: 0 auto;
+}
 .item { width: 25%; }
 .item.w2 { width: 50%; }

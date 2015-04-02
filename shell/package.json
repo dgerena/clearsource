@@ -12,11 +12,11 @@
     "async": "*",
     "better-require": "*",
     "coffee-script": "*",
-    "colors":"*",
+    "colors": "*",
     "ejs-mate": "*",
     "express": "*",
-    "express-session":"*",
-    "isotope-layout":"*",
+    "express-session": "*",
+    "isotope-layout": "*",
     "js-sha256": "*",
     "lodash": "*",
     "mysql": "*",
@@ -30,6 +30,7 @@
     "uuid": "*"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
     "mocha": "1.15.1"
   }
 }
