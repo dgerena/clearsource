@@ -4,12 +4,12 @@ var async = require('async');
 
 // Default Redirect
 route.get('/', function(req,res){
-	res.json({'Key': 'Value'});
+	res.render('demo.ejs');
 });
 // A route to be built upon
-route.get('/{routeWithinController}', function(req,res){
-	res.json({'Key': 'Value'});
-});
+// route.get('/{routeWithinController}', function(req,res){
+// 	res.json({'Key': 'Value'});
+// });
 
 //Necessary to run
 module.exports = route;
