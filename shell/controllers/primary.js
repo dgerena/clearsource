@@ -3,8 +3,8 @@ var route = require('express').Router();
 var async = require('async');
 
 // Default Redirect
-route.get('/', function(req,res){
-	res.render('demo.ejs');
+app.get('/', function(req,res){
+	res.render('demo');
 });
 // A route to be built upon
 // route.get('/{routeWithinController}', function(req,res){
