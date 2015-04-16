@@ -25,6 +25,8 @@ fs.readdirSync("./views").forEach(function(file) {
 	}
 });
 
+//here is a comment for me to git push to my server.
+
 // Get the policies for the application
 app.policies = require('./config/policies');
 
