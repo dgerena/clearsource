@@ -7,5 +7,4 @@ app.models.User = db.site.define('user', {
 	'fullName': Sequelize.TEXT,
 	'password': Sequelize.STRING(56),
 	'customerToken': Sequelize.UUID
-
-}
+});

@@ -15,6 +15,7 @@
 <script src="../bower_components/get-size/get-size.js"></script>
 <script src="../bower_components/jquery-bridget/jquery.bridget.js"></script>
 <script src="../bower_components/matches-selector/matches-selector.js"></script>
+<script src="../bower_components/fizzy-ui-utils/utils.js"></script>
 <script src="../bower_components/outlayer/item.js"></script>
 <script src="../bower_components/outlayer/outlayer.js"></script>
 <script src="../bower_components/qunit/qunit/qunit.js"></script>
@@ -22,13 +23,14 @@
 
 <script src="helpers.js"></script>
 <!-- tests -->
-<script src="basic-layout.js"></script>
-<script src="gutter.js"></script>
-<script src="stamp.js"></script>
-<script src="fit-width.js"></script>
-<script src="empty.js"></script>
-<script src="zero-column-width.js"></script>
-<script src="element-sizing.js"></script>
+<script src="unit/basic-layout.js"></script>
+<script src="unit/gutter.js"></script>
+<script src="unit/stamp.js"></script>
+<script src="unit/fit-width.js"></script>
+<script src="unit/empty.js"></script>
+<script src="unit/zero-column-width.js"></script>
+<script src="unit/element-sizing.js"></script>
+<script src="unit/pixel-rounding.js"></script>
 
 </head>
 <body>
@@ -135,6 +137,15 @@
     <div class="grid-sizer"></div>
     <div class="item"></div>
     <div class="item w2"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <h2>Pixel rounding</h2>
+  <div id="pixel-rounding" class="container">
+    <div class="gutter-sizer"></div>
+    <div class="item"></div>
+    <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
   </div>

@@ -1,3 +1,4 @@
+var Sequelize = require("sequelize");
 var mongojs = require("mongojs");
 
 ////////////////////// This manages the Database connection //////////////////////
