@@ -7,7 +7,20 @@ app.get('/', function(req,res){
 	res.render('demo');
 });
 
-app.get('/login',function(){
+app.get('/login',function(req,res){
+	res.render('login');
+})
+
+app.get('/login',function(req,res){
+	res.render('login');
+})
+app.get('/login',function(req,res){
+	res.render('login');
+})
+app.get('/login',function(req,res){
+	res.render('login');
+})
+app.get('/login',function(req,res){
 	res.render('login');
 })
 // A route to be built upon

@@ -13,6 +13,7 @@
     "better-require": "*",
     "coffee-script": "^1.9.2",
     "colors": "*",
+    "ejs": "^2.3.1",
     "ejs-mate": "*",
     "express": "^5.0.0-alpha.1",
     "express-session": "^1.11.1",

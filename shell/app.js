@@ -52,7 +52,7 @@ if (cluster.isMaster) {
 	app.models = {};
 	fs.readdirSync("./models").forEach(function(file) {
 		if(config.fileTypes.indexOf(path.extname(file)) > -1){
-			require("./models/" + file)();
+			require("./models/" + file);
 		}
 	});
 	

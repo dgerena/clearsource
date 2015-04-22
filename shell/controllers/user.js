@@ -12,7 +12,7 @@ route.get('/logout',function (req,res){
 
 route.post('/login', function (req,res){
 	console.log('user.js');
-	if(){
+	if(!user){
 		req.session.error = "That user does not exist";
 		res.render('login');
 	} else {
