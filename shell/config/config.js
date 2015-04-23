@@ -1,8 +1,9 @@
 var os = require('os');
 
 // set port
-module.exports = {
+var config = {
 	'http': 8080,
-	'numWorkers': os.cpus().length,
+	'numWorkers': 1, //os.cpus().length,
 	'fileTypes': ['.js','.cljs','.coffee']
 }
+module.exports = config;

@@ -69,7 +69,7 @@ if (cluster.isMaster) {
 	});
 
 	// Starts app on specified port
-	httpServer.listen(config.port, function(){
-		console.log("Port Listening on port "+config.port);
+	httpServer.listen(config.http, function(){
+		console.log("Port Listening on port "+config.http);
 	});
 }

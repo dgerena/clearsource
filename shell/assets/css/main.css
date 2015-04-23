@@ -10,10 +10,19 @@ header{
 	height: 84px;
 	background-color: #CCC;
 }
+/*header*/
 .csLogo{
 	height: 100%;
 }
-#login{
+#loginlink{
 	float: right;
 	vertical-align: middle;
+}
+/*Login body*/
+#login,#signup{
+	background-color: #ccc;
+	margin: 2em;
+	margin-top: 10px;
+	float: left;
+	width: 46%%;
 }
