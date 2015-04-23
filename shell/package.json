@@ -1,6 +1,6 @@
 {
   "name": "CLEARSOURCE",
-  "version": "0.0.1",
+  "version": "0.0.18",
   "authors": [
     {
       "name": "Damasio Eli Gerena IV",
@@ -8,6 +8,7 @@
       "email": "dgerena87d@gmail.com"
     }
   ],
+  
   "dependencies": {
     "async": "*",
     "better-require": "*",
