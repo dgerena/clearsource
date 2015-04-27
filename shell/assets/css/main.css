@@ -8,21 +8,54 @@ body{
 header{
 	width: 100%;	
 	height: 84px;
-	background-color: #CCC;
+	background-color: #ccd;
+	
+
 }
+
 /*header*/
 .csLogo{
 	height: 100%;
 }
+
 #loginlink{
 	float: right;
 	vertical-align: middle;
 }
+
+/*footer*/
+footer{
+	width: 100%;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+}
+
 /*Login body*/
 #login,#signup{
+	padding-top: 10px;
+	margin: 4em;
+	margin-top: 2em;
+}
+
+#login h3,#signup h3{
+	margin-top:2.5em;
+}
+
+#top: {
+	padding: 2em;
+	padding-top: 10px;
 	background-color: #ccc;
-	margin: 2em;
-	margin-top: 10px;
-	float: left;
-	width: 46%%;
+
+}
+
+#left h3,#left a{
+	color:#eee;
+}
+
+#right{
+	color: #eee;
+	padding: 2em;
+	padding-top: 10px;
+	background-color: #ccd;
 }

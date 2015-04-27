@@ -1,0 +1,24 @@
+Month 2 Week 4
+	Node instillation correct and working.
+	Server side temporarily pushed back till site is completed locally.
+	Home page and displaying of ARticles in isotope is working.
+	Login page under development. 
+
+	To do-
+		make (front end) login page,
+		make (front end) sign-up page,
+		Create user,
+		make (front end) user home page,
+		Read user data,
+		Update user data,
+		Delete user data,
+		make (front end) blog sections
+		Create blog,
+		Read blog data,
+		Update blog data,
+		Delete blog data,
+		Make (front end) article page,
+		Create article,
+		Read article data,
+		Update article data,
+		Delete article data
