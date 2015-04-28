@@ -12,6 +12,9 @@ global.app = express();
 
 // Adding httpServer to Skeleton
 var httpServer = http.createServer(app);
+
+// Making sure the hotlinks created during each of the following
+// for each's that go through my directory are seen globally.
 global.hotlinks = {};
 
 // Set the rendering agent to fix the white spacing

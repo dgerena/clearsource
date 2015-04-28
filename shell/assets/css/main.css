@@ -8,16 +8,19 @@ body{
 header{
 	width: 100%;	
 	height: 84px;
-	background-color: #ccd;
-	
-
+	background-color: #aaa;
 }
 
 /*header*/
 .csLogo{
 	height: 100%;
 }
-
+#logoclear{
+	color:#08d;
+}
+#logosource{
+	color:#eee;
+}
 #loginlink{
 	float: right;
 	vertical-align: middle;
@@ -32,9 +35,23 @@ footer{
 }
 
 /*Login body*/
-#login,#signup{
+#top {
+	text-align: center;
+	padding: 2em;
 	padding-top: 10px;
-	margin: 4em;
+	background-color: #bbb;
+}
+
+#bottom{
+	text-align: center;
+	padding: 2em;
+	padding-top: 10px;
+
+}
+#login,#signup{
+	width: 30%;
+	padding-top: 10px;
+	margin: 0 auto;
 	margin-top: 2em;
 }
 
@@ -42,20 +59,3 @@ footer{
 	margin-top:2.5em;
 }
 
-#top: {
-	padding: 2em;
-	padding-top: 10px;
-	background-color: #ccc;
-
-}
-
-#left h3,#left a{
-	color:#eee;
-}
-
-#right{
-	color: #eee;
-	padding: 2em;
-	padding-top: 10px;
-	background-color: #ccd;
-}
