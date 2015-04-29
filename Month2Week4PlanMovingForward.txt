@@ -5,8 +5,8 @@ Month 2 Week 4
 	Login page under development. 
 
 	To do-
-		make (front end) login page,
-		make (front end) sign-up page,
+		-make (front end) login page,
+		-make (front end) sign-up page,
 		Create user,
 		make (front end) user home page,
 		Read user data,

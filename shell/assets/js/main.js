@@ -1,17 +1,8 @@
 
-// var container = document.querySelector('#container');
-// // init
-// var iso = new Isotope( container, {
-//   itemSelector: '.item',
-//   getSortData: {
-//     name: '.name',
-//     category: '[data-category]'
-//   },
-//   masonry: {
-//     columnWidth: 200
-//   }
-// });
+
 (function($){
+	$.fn.serializeObject=function(){var i={},e=this.serializeArray();return $.each(e,function(){void 0!==i[this.name]?(i[this.name].push||(i[this.name]=[i[this.name]]),i[this.name].push(this.value||"")):i[this.name]=this.value||""}),i};
+	
 	$('#container').isotope({
 	  // main isotope options
 	  itemSelector: '.item',

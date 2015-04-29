@@ -11,6 +11,7 @@ var location = {
 	'port': 8889,		// Port
 	'dialect': 'mysql'	// Kind of SQL db
 };
+
 db.site	= new Sequelize('clearsource',user, pass, location);
 // module.exports = {
 	// 'blog' : mySql(

@@ -36,10 +36,17 @@ footer{
 
 /*Login body*/
 #top {
-	text-align: center;
+	height: 12em;
+	text-align: left;
 	padding: 2em;
 	padding-top: 10px;
 	background-color: #bbb;
+}
+
+.topinfo{
+	text-align: left;
+	margin: auto;
+	width: 30%;
 }
 
 #bottom{
@@ -50,12 +57,14 @@ footer{
 }
 #login,#signup{
 	width: 30%;
-	padding-top: 10px;
 	margin: 0 auto;
 	margin-top: 2em;
 }
 
 #login h3,#signup h3{
 	margin-top:2.5em;
+}
+#signup p {
+	text-align: left;
 }
 

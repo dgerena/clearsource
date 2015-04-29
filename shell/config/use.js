@@ -4,7 +4,7 @@
 
 // Requires 
 var express = require('express');
-var expressSession = require('express-session');
+var session = require('express-session');
 var ejs = require('ejs-mate');
 
 // Set View Engine to EJS
@@ -21,9 +21,11 @@ app.use('/assets', express.static('./assets'));
 
 // Sessions
 app.use(
-	expressSession(
-		{secret: 'k23j4l2j23j24lj2lkj8w9d7hcxjd23'}
-	)
+	session({
+		'secret': 'k23j4l2j23j24lj2lkj8w9d7hcxjd23',
+		'resave': false,
+		'saveUninitialized': true
+	})
 );
 
 // Adds things to views for easier rendering
