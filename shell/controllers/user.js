@@ -4,22 +4,23 @@ var async = require('async');
 //For the password
 //var uuid = require('uuid');
 
-app.get('/login', function (req,res){
+route.get('/login', function (req,res){
 	console.log('user.js app get login');
-		res.render('login'); 
+		res.render('user/login'); 
 });
 
 route.post('/login', function (req,res){
 	console.log('login');
 });
 
-app.get('/signup',function (req,res){
-	console.log('user.js singup get',17,req.query);
-	res.render('signup');
+route.get('/signup',function (req,res){
+	console.log('user.js signup get',17);
+	res.render('user/signup');
 });
 
 route.post('/signup',function (req,res){
-	console.log('user.js signup post',22,req.query);
+	console.log('user.js signup post',22);
+	res.json(req.body);
 });
 
 route.get('/logout',function (req,res){

@@ -9,7 +9,6 @@ if (cluster.isMaster) {
 	}
 
 	cluster.on('exit', function (worker) {
-
 		// Replace the dead worker,
 		// we're not sentimental
 		console.log('Worker ' + worker.id + ' died :(');
@@ -27,6 +26,9 @@ if (cluster.isMaster) {
 
 	// Skeleton of an Application
 	global.app = express();
+	
+
+	// global.shortcuts = express();
 
 	// Adding httpServer to Skeleton
 	var httpServer = http.createServer(app);
@@ -36,18 +38,6 @@ if (cluster.isMaster) {
 
 	// Get the policies for the application	
 	app.policies = require('./config/policies');
-
-	// Making sure the hotlinks created during each of the following
-	// for each's that go through my directory are seen globally.
-	global.hotlinks = {};
-
-	// Set the views for the pages controller in the hot links
-	fs.readdirSync("./views").forEach(function(file) {
-		if(file.slice(-3) == "ejs"){
-			file = file.split(".")[0];
-			hotlinks[file] = '/pages/'+file;
-		}
-	});
 
 	// --- Models --- //
 	app.models = {};
@@ -66,7 +56,7 @@ if (cluster.isMaster) {
 
 	// 404 ---- Page
 	app.get("/*", function(req, res){
-		res.render('404');
+		res.render('public/404');
 	});
 
 	// Starts app on specified port

@@ -6,6 +6,7 @@
 var express = require('express');
 var session = require('express-session');
 var ejs = require('ejs-mate');
+var bodyParser = require('body-parser');
 
 // Set View Engine to EJS
 app.engine('ejs', ejs);

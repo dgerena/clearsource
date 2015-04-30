@@ -9,4 +9,4 @@ app.models.User = db.site.define('user', {
 	'password': Sequelize.STRING(56)
 });
 
-db.site.sync()
+db.site.sync();

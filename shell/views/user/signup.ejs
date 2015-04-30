@@ -1,0 +1,47 @@
+<% layout('user/layout') -%>
+		<section id="top">
+			<article class="topinfo">
+				<h3>Hello, welcome to <span id="logoclear">CLEAR</span><span id="logosource">SOURCE</span></h3> 
+
+				<p>Here we strive to give you as a knowledgeable person a deserving environment. </p>
+			</article>
+		</section>
+		<section id="bottom">	
+			<article class="topinfo">
+				<p>We do this by validating our members through direct link</p>
+				<p>Thus why we ask for a proper link during registration.</p>					
+			</article>
+			<article id="signup">
+				<form class="form" action="/user/signup" method="POST">
+					<h3>Register to become a member.</h3>
+					<div class="form-group">
+						<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required />
+					</div>
+					<div class="form-group">
+						<input name="name" type="text" class="form-control" id="validlink" placeholder="Name" required />
+					</div>
+					<div class="form-group">
+						<input name="password" type="password" class="form-control" id="InputPassword1" placeholder="Password" required />
+					</div>
+					<p><strong>We ask that you link to the following</strong>&colon;</p>
+					<p>Your practice, Portfolios, Office and/or Digital Documentation. </p>
+					<div class="form-group">
+						<input name="reference" type="text" class="form-control" id="validlink" placeholder="Validation Reference Link" required />
+					</div>
+					<div class="checkbox">
+						<label>
+						  <input name="remember" type="checkbox"> Remember my password.
+						</label>
+					</div>
+					<button class="btn btn-block btn-primary">Join</button>
+				</form>
+				<ul>
+					<a href="">Forgot password?</a>
+					<a href="">Broken Form?</a>
+					<a href="login">Current user?</a>
+				</ul>
+			</article>
+		</section>
+		<footer>
+			<a href="">Created by me</a>
+		</footer>
