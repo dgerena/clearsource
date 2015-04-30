@@ -20,7 +20,16 @@ route.get('/signup',function (req,res){
 
 route.post('/signup',function (req,res){
 	console.log('user.js signup post',22);
-	res.json(req.body);
+	app.models.Users
+		.findOrCreate({
+			'where':{ 'fullname':req.body.name},
+			'id':uuid.v4(),
+			'active':true,
+			'fullname':req.body.name,
+			'password':req.body.password
+		}).success(function(user){
+			res.json(user);
+		})
 });
 
 route.get('/logout',function (req,res){

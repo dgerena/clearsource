@@ -17,6 +17,9 @@ app.use('/views', express.static('/views'));
 app.use('/views/about', express.static('/views/about'));
 app.use('/views/careers', express.static('/views/careers'));
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({'extended': true}));
+
 // Assets i.e. CSS and JS
 app.use('/assets', express.static('./assets'));
 
