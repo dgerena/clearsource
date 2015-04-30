@@ -10,10 +10,6 @@
   ],
   "dependencies": {
     "async": "*",
-    "better-require": "*",
-    "coffee-script": "^1.9.2",
-    "colors": "^1.1.0",
-    "ejs": "^2.3.1",
     "ejs-mate": "*",
     "express": "*",
     "express-session": "^1.11.1",
@@ -21,13 +17,8 @@
     "js-sha256": "^0.2.3",
     "lodash": "^3.7.0",
     "mongojs": "*",
-    "mysql": "^2.6.2",
-    "passport": "*",
-    "passport-facebook": "*",
-    "passport-twitter": "*",
     "sequelize": "^2.0.6",
     "sequelize-hierarchy": "^0.2.10",
-    "sitemap": "*",
     "uuid": "*"
   },
   "devDependencies": {
