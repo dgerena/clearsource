@@ -18,8 +18,8 @@
     "js-sha256": "^0.2.3",
     "lodash": "^3.7.0",
     "mongojs": "*",
-    "sequelize": "^2.0.6",
-    "sequelize-hierarchy": "^0.2.10",
+    "sequelize": "*",
+    "sequelize-hierarchy": "*",
     "uuid": "*"
   },
   "devDependencies": {

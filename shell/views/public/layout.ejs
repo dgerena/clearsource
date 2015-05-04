@@ -1,6 +1,11 @@
 <% layout('layout') -%>
 <header>
 	<a href="/"><img class="csLogo" src="http://drive.google.com/uc?export=view&id=0B0PkWX3H1zNAZS10Y0VUOGNMWlU"></a>
-	<a id="loginlink" href="/user/login">Login</a>
+	<% if(!session.user) {%>
+		<a id="loginlink" href="/user/login">Login</a>
+	<% }else{ %>
+		<a id="loginlink" href="dash"><%=session.user.name %></a>
+		<a id="loginlink" href="/user/logout" >Log Out</a>
+	<% } %>
 </header>
 <%- body %>

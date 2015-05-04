@@ -12,6 +12,15 @@
 	</head>
 	<body>
 		<%-body %>
+		<% if(session.error){ %>
+			<div id="alert" class="alert alert-danger col-xs-12 text-center " role="alert" onmouseover="document.getElementById('alert').style.display = 'none';">
+				<%=session.error %></div>
+			<% delete session.error; %>
+		<% } else if(session.success){ %>
+			<div id="alert" class="alert alert-success col-xs-12 text-center " role="alert" onmouseover="document.getElementById('alert').style.display = 'none';">
+				<%=session.success %></div>
+			<% delete session.success; %>
+		<% } %>
 		<script src="/assets/js/bootstrap.min.js"></script>
 		<script src="/assets/js/isotope.pkgd.min.js"></script>
 		<script src="/assets/js/main.js"></script>

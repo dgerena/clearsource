@@ -24,6 +24,7 @@ header{
 #loginlink{
 	float: right;
 	vertical-align: middle;
+	margin: 1em;
 }
 
 /*footer*/
@@ -67,4 +68,7 @@ footer{
 #signup p {
 	text-align: left;
 }
-
+.alert{
+	position: absolute;
+  	top: 78px;
+}
