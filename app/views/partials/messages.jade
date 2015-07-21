@@ -1,0 +1,16 @@
+-if(req.session.error)
+	.alert.alert-danger.col-xs-12.text-center(role="alert")
+		span=req.session.error
+		- delete req.session.error
+-if(req.session.warning)
+	.alert.alert-warning.col-xs-12.text-center(role="alert")
+		span=req.session.warning
+		- delete req.session.warning
+-if(req.session.info)
+	.alert.alert-info.col-xs-12.text-center(role="alert")
+		span=req.session.info
+		- delete req.session.info
+-if(req.session.success)
+	.alert.alert-success.col-xs-12.text-center(role="alert")
+		span=req.session.success
+		- delete req.session.success

@@ -1,0 +1,48 @@
+- if(!req.session.user)
+	+modal-sm("login")
+		.modal-header
+			button.close(type="button" data-dismiss="modal" area-label="Close")
+				span(aria-hidden="true") &times;
+			h4.modal-title Login
+		.modal-body
+			form(action="/public/login" method="POST")
+				.form-group
+					label Email
+					input.form-control(name="email" type="text" placeholder="Email")
+				.form-group
+					label Password
+					input.form-control(name="password" type="password" placeholder="Password")
+				.form-group
+					button.btn.btn-block.btn-primary(type="submit") Login
+				.form-group
+					button.btn.btn-block.btn-default(type="button" data-dismiss="modal" data-toggle="modal" data-target="#signup") Signup
+	+modal-lg("signup")
+		.modal-header
+			button.close(type="button" data-dismiss="modal" area-label="Close")
+				span(aria-hidden="true") &times;
+			h4.modal-title Signup
+		.modal-body
+			form(action="/public/signup" method="POST")
+				.form-group.col-xs-12
+					label Username
+					input.form-control(name="userName" type="text" placeholder="Username")
+				.form-group.col-xs-12
+					label Reference
+					input.form-control(name="reference" type="text" placeholder="Reference are for clarifying whom you are and why you are knowledgable in your field.")
+				.form-group.col-xs-12
+					label Email
+					input.form-control(name="email" type="text" placeholder="Email")
+				.form-group.col-xs-6
+					label FirstName
+					input.form-control(name="firstName" type="text" placeholder="FirstName")
+				.form-group.col-xs-6
+					label LastName
+					input.form-control(name="lastName" type="text" placeholder="LastName")
+				.form-group.col-xs-6
+					label Password
+					input.form-control(name="password" type="password" placeholder="Password")
+				.form-group.col-xs-6
+					label Confirm Password
+					input.form-control(name="confirmPassword" type="password" placeholder="Password")
+				.form-group
+					button.btn.btn-block.btn-primary#prevSignup(type="button") Signup

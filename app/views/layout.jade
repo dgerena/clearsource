@@ -5,13 +5,23 @@ html
 
     // Viewport mobile tag for sensible mobile support
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
-
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css")
+    link(rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css")
+    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    
+    include mixins/modals    
     block styles
 
   body
+    include partials/login
+    include partials/nav
+    include partials/messages
     block body
 
     // The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js
     // SCRIPTS
+    script(src="/js/dependencies/sails.io.js")
+    script(src="/js/main.js")
     // SCRIPTS END
-

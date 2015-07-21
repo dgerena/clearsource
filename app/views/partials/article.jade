@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	- if(req.session.user)
+		+modal-lg("createArticle")
+		.modal-header
+			button.close(type="button" data-dismiss="modal" area-label="Close")
+				span(aria-hidden="true") &times;
+			h4.modal-title Create an Article
+		.modal-body
+			form(action="/article/create" method="POST")
+				.form-group.col-xs-12
+					label Title
+					input.form-control(name="Title" type="text" placeholder="Title")
+				.form-group.col-xs-12
+					label Reference
+					input.form-control(name="reference" type="text" placeholder="This reference is for clarifying what your article is about or what source you get your information from.")
+				.form-group.col-xs-12
+					label Article body
+					input.form-control(name="Article body" type="text" placeholder="Article body")
+				.form-group
+					button.btn.btn-block.btn-primary#prevSignup(type="button") Submit
