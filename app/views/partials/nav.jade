@@ -5,29 +5,17 @@ nav.navbar.navbar-default
 			a.navbar(href="/")
 				img.navbar-brand(style="" src="http://drive.google.com/uc?export=view&id=0B0PkWX3H1zNAZS10Y0VUOGNMWlU")
 		.collapse.navbar-collapse
+			ul.nav.navbar-nav.textcapitalize
+				li
+					a(href="/public/Medical") Medical
+				li
+					a(href="/public/Educational") Educational
+				li
+					a(href="/public/Social") Social
+
 			- if(req.session.user)
-				ul.nav.navbar-nav.textcapitalize
-					- for(var c in sails.controller)
-						- if(c === req.options.controller)
-							li.active
-								a(href="/"+c)
-						- else if( req.session.user.type === "admin" || adminOnly.indexOf(c) === -1)
-							li
-								a(href="/"+c)
-					- if( req.session.user.type === "admin" || adminOnly.indexOf(c) === -1)
-						li
-							button.btn.btn-default.navbar-btn.navbar-right(type="button" data-toggle="modal" data-target="#createArticle") Create Article
-					- else
-						pass
 				p.navbar-text.navbar-right
 					a.navbar-link(href="#")=req.session.user.userName
 					a(href="/public/logout" title="logout") Logout
-			- else
-				ul.nav.navbar-nav.textcapitalize
-					li
-						a(href="/public/Medical") Medical
-					li
-						a(href="/public/Educational") Educational
-					li
-						a(href="/public/Social") Social
+			- else 
 				button.btn.btn-default.navbar-btn.navbar-right(type="button" data-toggle="modal" data-target="#login") Login

@@ -1,5 +1,5 @@
 /**
-* Article.js
+* Topic.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -13,8 +13,8 @@ var header = { //defines the simulated browser that unirest in making the reques
 }
 
 module.exports = {
-	identity: "Article",
-	tableName: "articles",
+	identity: "Topic",
+	tableName: "topics",
 	connection: "ClearSourceDB",
 
 	attributes: {
@@ -24,42 +24,6 @@ module.exports = {
 			unique: true,
 			defaultsTo: uuid.v4
 		},
-		topic: "string",
-		title: {
-			type: "string",
-			required: true,
-			maxLength: 60
-		},
-		body: {
-			type: "string",
-			required: true
-		},
-		authorId: {
-			type: "string",// will be the uuid of the user who created it.
-			required: true
-		},
-		author: {
-			type: "string",
-			required: true
-		},
-		reference:{
-			type: "string",
-			url: true,
-			required: true
-		},
-		parent: "string"
-	},
-	beforeCreate: function(values,callback){
-		unirest
-			.get(values.reference)
-			.header(header)
-			.end(function (response){
-				if(response.body){
-					callback();
-				}else{
-					callback("Reference is not valid");
-				}
-			});
+		topic: "string"
 	}
 };
-

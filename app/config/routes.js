@@ -35,6 +35,14 @@ module.exports.routes = {
   '/': {
     controller: "public",
     action: "index"
+  },
+  '/article/read/:uuid': {
+    controller: "article",
+    action: "read"
+  },
+  '/topics/r/:topic':{
+    controller:"topics",
+    action: "index"
   }
 
   /***************************************************************************

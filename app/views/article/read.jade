@@ -1,0 +1,11 @@
+extends ../layout
+block body
+	section.container
+		each article in articles
+			article.panel.panel-primary
+				.panel-heading
+					h3.panel-title=article.title+" - "
+						small=article.author
+				.panel-body
+					p=article.body
+				.panel-footer=article.createdAt

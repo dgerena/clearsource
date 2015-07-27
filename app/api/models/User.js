@@ -12,7 +12,6 @@ module.exports = {
 	identity: "User",
 	tableName: "users",
 	connection: "ClearSourceDB",
-
 	attributes: {
 		active:"boolean",
 		uuid: {
@@ -28,9 +27,11 @@ module.exports = {
 			type:"string",
 			unique: true,
 		},
+		theme:"string",
 		firstName: "string",
 		lastName: "string",
 		email: "email",
+		adminOf: "array",
 		reference:{
 			type: "string",
 			url: true,

@@ -1,3 +1,10 @@
 extends ../layout
 block body
-	section
+	each topic in topics
+		section.panel(topic=topic)
+			.panel-heading=topic
+			.panel-body
+				//- filled in with ajax
+				//- article articles
+
+	

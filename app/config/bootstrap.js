@@ -10,8 +10,15 @@
  */
 
 module.exports.bootstrap = function(cb) {
-
-  // It's very important to trigger this callback method when you are finished
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
+	// Bootstrapping for mongojs models to attach the native collection of models to my models.
+	for(var m in sails.models){
+		if(sails.models[m].mongo){
+			sails.models[m].native(function(err, collection) {
+				sails.models[m].nativeAccess = collection; 
+			})
+		};
+	};
+	// It's very important to trigger this callback method when you are finished
+	// with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+	cb();
 };

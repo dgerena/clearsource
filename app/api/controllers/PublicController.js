@@ -1,6 +1,19 @@
+var async = require('async');
+
 module.exports={
 	index:function(req,res){
-		res.view();
+		if(!req.session.user){
+			Topic
+				.nativeAccess
+				.distinct('topic',function (err,topics){
+					res.view({'topics': topics});
+				});
+		}else if(req.session.user){
+			res.redirect("/topic");
+		}
+	},
+	topic: function(req,res){
+
 	},
 	signup:function(req,res){
 		User
@@ -44,6 +57,7 @@ module.exports={
 					req.session.error = "That user does not exit."
 				}else if(user.verifyPassword(req.body.password)){
 					req.session.user={
+						uuid:user.uuid,
 						userName:user.userName,
 						reference:user.reference,
 						email:user.email,
@@ -55,5 +69,10 @@ module.exports={
 				}
 				res.redirect("/");
 			})
+	},
+	logout:function(req,res){
+		req.session.destroy();
+		res.redirect("/");
 	}
+
 }

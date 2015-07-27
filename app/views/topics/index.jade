@@ -1,0 +1,17 @@
+extends ../layout
+block body
+	- if(req.session.user.type == "Overlord")
+		.nav.nav-pills
+			.collapse.navbar-collapse
+				button.btn.btn-default(type="button" data-toggle="modal" data-target="#create") Create Topic
+
+	each topic in _.pluck(articles, "topic")
+		section.container
+			each article in articles
+				article.panel.panel-primary
+					.panel-heading
+						h3.panel-title=article.title+" - "
+							small=article.author
+					.panel-body
+						p=article.body
+					.panel-footer=article.createdAt
