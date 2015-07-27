@@ -58,7 +58,7 @@ module.exports.connections = {
   ***************************************************************************/
   ClearSourceDB: {
     adapter: 'sails-mongo',
-    host: '45.55.227.233',//My db server
+    host: '104.236.80.36',//My db server
     // host: '10.63.27.39',//Temp with alt laptop db
     port: 27017,
     // user: 'username',

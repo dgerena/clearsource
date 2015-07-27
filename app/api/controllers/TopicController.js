@@ -1,11 +1,11 @@
+
 module.exports={
 	index:function(req,res){
-		Topics
+		Topic
 			.nativeAccess
-			.find(search)
-			.exec(function (err,Topics){
-				res.view(Topics)
-			})
+			.distinct('topic',function (err, topics){
+				res.view({topics: topics});
+			});
 	},
 	create:function(req,res){
 		console.log(req.session);
@@ -24,7 +24,7 @@ module.exports={
 		if(req.params.uuid){
 			search.uuid = req.params.uuid
 		}
-		Topics
+		Topic
 			.find(search)
 			.exec(function (err,Topics){
 				if(err){
@@ -39,7 +39,8 @@ module.exports={
 			})
 	},
 	upsert:function(req,res){
-		Topics.nativeAccess
+		Topic
+			.nativeAccess
 			.update(
 			    {keyword:key},
 			    {upsert:true,safe:false},
@@ -52,7 +53,7 @@ module.exports={
 			    })
 	},
 	delete:function(req,res){
-		Topics
+		Topic
 			.destroy({
 				uuid: req.quer.uuid || ""
 			})

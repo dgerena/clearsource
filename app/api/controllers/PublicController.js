@@ -12,9 +12,6 @@ module.exports={
 			res.redirect("/topic");
 		}
 	},
-	topic: function(req,res){
-
-	},
 	signup:function(req,res){
 		User
 			.findOrCreate({

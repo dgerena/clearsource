@@ -18,7 +18,10 @@ module.exports = {
 	connection: "ClearSourceDB",
 
 	attributes: {
-		active:"boolean",
+		active:{
+			type:"boolean",
+			defaultsTo: true,
+		},
 		uuid: {
 			type: "string",
 			unique: true,
