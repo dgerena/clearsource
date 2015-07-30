@@ -35,7 +35,7 @@ module.exports={
 					req.session.warning = "The Topics articles couldn't be found or does not exist.";
 					res.redirect("back");
 				}else{
-					res.view({"topic":articles});
+					res.view({"topic":articles});//What is going on why arent you returning for the nav? Was working fine before...
 				}
 			})
 	},
