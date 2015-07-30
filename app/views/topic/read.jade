@@ -2,13 +2,21 @@ extends ../layout
 block body
 	include ../article/partials/create
 	-if(!req.session.user)
-
-
+		span.sr-only
 	-else if(req.session.user.type == "Overlord" || req.session.user.type == "Admin")
 		.nav.nav-pills
 			.collapse.navbar-collapse
 				button.btn.btn-default(type="button" data-toggle="modal" data-target="#create") Create Article
 	section.container
+		- if(!articles)
+			article.panel.panel-primary
+				.panel-heading
+					h3.panel-title="No articls yet present. - "
+						small="You can be an author"
+				.panel-body
+					p="Submit your article today!"
+				.panel-footer=""
+		- else if(articles)
 			each article in articles
 				article.panel.panel-primary
 					.panel-heading

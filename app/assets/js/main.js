@@ -22,10 +22,12 @@ $("document").ready(function(){
 		}
 	});
 	$.ajax({
-		'url':'/public/nav/',  // "Medical"
+		'url':'/public/nav/',
 		'method':'GET',
 		'success': function(response){
-			// console.log(response);
+			for(var t=0;t<response.length; t++){
+				console.log(response[t].active);
+			}
 			for(var t=0;t<response.length; t++){
 				$("#nav").append('<li><a href="/topic/r/'+response[t]+'">'+response[t]+'</a></li>');
 			}

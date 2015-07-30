@@ -32,6 +32,7 @@ module.exports = {
 			required: true,
 			minLength:4
 		},
+		currentTopic:"string",
 		theme:"string",
 		firstName: "string",
 		lastName: "string",

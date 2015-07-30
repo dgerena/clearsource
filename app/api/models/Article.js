@@ -28,6 +28,7 @@ module.exports = {
 			defaultsTo: uuid.v4
 		},
 		topic: "string",
+		parent: "string",
 		title: {
 			type: "string",
 			required: true,
@@ -50,7 +51,6 @@ module.exports = {
 			url: true,
 			required: true
 		},
-		parent: "string"
 	},
 	beforeCreate: function(values,callback){
 		unirest

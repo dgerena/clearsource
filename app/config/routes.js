@@ -43,7 +43,11 @@ module.exports.routes = {
   '/topic/r/:topic':{
     controller:"topic",
     action: "read"
-  }
+  },
+  // '/article/r/:article':{
+  //   controller:"article",
+  //   action: "read"
+  // },
 
 
   /***************************************************************************

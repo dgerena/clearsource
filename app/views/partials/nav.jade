@@ -6,11 +6,10 @@ nav.navbar.navbar-default
 				img.navbar-brand(style="" src="http://drive.google.com/uc?export=view&id=0B0PkWX3H1zNAZS10Y0VUOGNMWlU")
 		.collapse.navbar-collapse
 			ul.nav.navbar-nav.textcapitalize#nav
-
 			- if(req.session.user)
 				p.navbar-text.navbar-right
 					a.navbar-link(href="#")=req.session.user.userName
-					a(href="/public/logout" title="logout") Logout
+					a.navbar-link(href="/public/logout" title="logout") Logout
 			- else 
 				button.btn.btn-default.navbar-btn.navbar-right(type="button" data-toggle="modal" data-target="#signup") Signup
 				button.btn.btn-default.navbar-btn.navbar-right(type="button" data-toggle="modal" data-target="#login") Login

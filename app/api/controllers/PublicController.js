@@ -6,7 +6,8 @@ module.exports={
 		if(!req.session.user){
 			Topic
 				.nativeAccess
-				.distinct('topic',function (err,topics){
+				.distinct('topic',{"active":true},function (err,topics){
+					// console.log("public controller",topics);
 					res.view({'topics': topics});
 				});
 		}else if(req.session.user){
@@ -16,8 +17,8 @@ module.exports={
 	nav:function(req,res){
 		Topic
 			.nativeAccess
-			.distinct('topic',function (err,topics){
-				console.log(topics);
+			.distinct('topic',{"active":true},function (err,topics){
+				// console.log(topics);
 				res.json(topics);
 			});
 	},
