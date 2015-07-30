@@ -4,7 +4,8 @@ module.exports={
 		Topic
 			.nativeAccess
 			.distinct('topic',function (err, topics){
-				res.view({topics: topics});
+				console.log(req.session.user);
+				res.view({"topic": topics});
 			});
 	},
 	create:function(req,res){
@@ -26,15 +27,15 @@ module.exports={
 		}
 		Topic
 			.find(search)
-			.exec(function (err,Topics){
+			.exec(function (err,articles){
 				if(err){
 					req.session.error = err
 					res.redirect("back");
-				}else if(!Topicss.length){
-					req.session.warning = "The Topics couldn't be found or does not exist.";
+				}else if(!articles.length){
+					req.session.warning = "The Topics articles couldn't be found or does not exist.";
 					res.redirect("back");
 				}else{
-					res.view({"topics":articles});
+					res.view({"topic":articles});
 				}
 			})
 	},

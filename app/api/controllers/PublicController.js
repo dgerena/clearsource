@@ -2,6 +2,7 @@ var async = require('async');
 
 module.exports={
 	index:function(req,res){
+		//Needs to be able to show all articles with the individual topics...
 		if(!req.session.user){
 			Topic
 				.nativeAccess
@@ -11,6 +12,14 @@ module.exports={
 		}else if(req.session.user){
 			res.redirect("/topic");
 		}
+	},
+	nav:function(req,res){
+		Topic
+			.nativeAccess
+			.distinct('topic',function (err,topics){
+				console.log(topics);
+				res.json(topics);
+			});
 	},
 	signup:function(req,res){
 		User
@@ -29,6 +38,8 @@ module.exports={
 			}).exec(function (err,user){
 				if(err){
 					req.session.error = err
+					console.log(err);
+				
 				}else if(user.created){
 					req.session.user={
 						userName:user.userName,
@@ -38,7 +49,7 @@ module.exports={
 						lastName:user.lastName
 					}
 				}else{
-					req.session.error="That user already exists."
+					req.session.error = "That user already exists."
 				}
 				res.redirect("/");
 			})
@@ -53,13 +64,15 @@ module.exports={
 				}else if(!user){
 					req.session.error = "That user does not exit."
 				}else if(user.verifyPassword(req.body.password)){
+					console.log(user);
 					req.session.user={
 						uuid:user.uuid,
 						userName:user.userName,
 						reference:user.reference,
 						email:user.email,
 						firstName:user.firstName,
-						lastName:user.lastName
+						lastName:user.lastName,
+						type:user.type
 					}
 				}else{
 					req.session.error= "Incorrect Password"

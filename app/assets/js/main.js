@@ -1,3 +1,5 @@
+$.fn.serializeObject=function(){var i={},e=this.serializeArray();return $.each(e,function(){void 0!==i[this.name]?(i[this.name].push||(i[this.name]=[i[this.name]]),i[this.name].push(this.value||"")):i[this.name]=this.value||""}),i};
+
 $("document").ready(function(){
 	var dom = {
 		"prevSignup": $("#prevSignup"),
@@ -6,11 +8,27 @@ $("document").ready(function(){
 	};
 	dom.prevSignup.click(function(){
 		console.log("clickety clack Im a computer",dom.password.val(),dom.confirmPassword.val());
-		if(dom.password.val() === dom.confirmPassword.val()){
-			dom.prevSignup.parents("form").submit();
-		}else{
-			dom.password.parent().addClass("has-error");
-			dom.confirmPassword.parent().addClass("has-error");
+		$form = dom.prevSignup.parents("form");
+		attrs = $form.serializeObject();
+		var badattr = true;
+		for(var a in attrs){
+			if(!attrs[a]){
+				badattr = false;
+				$('[name="'+a+'"]').parent().addClass("has-error");
+			}
+		}
+		if(dom.password.val() === dom.confirmPassword.val() && badattr){
+			$form.submit();
+		}
+	});
+	$.ajax({
+		'url':'/public/nav/',  // "Medical"
+		'method':'GET',
+		'success': function(response){
+			// console.log(response);
+			for(var t=0;t<response.length; t++){
+				$("#nav").append('<li><a href="/topic/r/'+response[t]+'">'+response[t]+'</a></li>');
+			}
 		}
 	})
 });

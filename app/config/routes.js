@@ -40,10 +40,11 @@ module.exports.routes = {
     controller: "article",
     action: "read"
   },
-  '/topics/r/:topic':{
-    controller:"topics",
-    action: "index"
+  '/topic/r/:topic':{
+    controller:"topic",
+    action: "read"
   }
+
 
   /***************************************************************************
   *                                                                          *

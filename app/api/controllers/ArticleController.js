@@ -15,7 +15,7 @@ module.exports={
 				if(err){
 					req.session.error = JSON.stringify(err);
 				}
-				res.redirect("/article");
+				res.redirect("/topic/r/:topic");
 			})
 	},
 	read:function(req,res){// recall all of a users articles

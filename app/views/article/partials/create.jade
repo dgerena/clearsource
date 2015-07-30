@@ -15,4 +15,5 @@
 				label Article body
 				input.form-control(name="body" type="text" placeholder="Article body")
 			.form-group
+				input.form-control(type="hidden" name="topic" value="req.params.topic")
 				button.btn.btn-block.btn-primary#prevSignup(type="submit") Submit

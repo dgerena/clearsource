@@ -29,6 +29,8 @@ module.exports = {
 		userName: {
 			type:"string",
 			unique: true,
+			required: true,
+			minLength:4
 		},
 		theme:"string",
 		firstName: "string",

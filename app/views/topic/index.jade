@@ -1,5 +1,7 @@
 extends ../layout
 block body
+	include partials/create
+
 	- if(req.session.user.type == "Overlord")
 		.nav.nav-pills
 			.collapse.navbar-collapse
